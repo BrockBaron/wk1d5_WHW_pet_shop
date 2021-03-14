@@ -39,34 +39,6 @@ def get_pets_by_breed(pet_shop, breed_name):
         if pet["breed"] == breed_name:
             breed.append(pet)
     return breed
-#
-
-# #9
-# def get_pets_by_breed(pet_shop, breed):
-#     breed_not_found = []
-#     for pet in pet_shop["pets"]:
-#         if pet["breed"] == 'Dalmation':
-#             breed_not_found.append(pet)
-#             print(len(breed_not_found))
-#     return breed_not_found
-
-#list comprehension 
-#import copy
-# def get_pets_by_breed(pet_shop, breed):
-    
-#     pets= pet_shop['pets']
-    
-#     list_of_breeds = list()
-#     breed_type = pet_shop.items()
-#     for item  in breed_type:
-#         if item[0] == breed:
-#             list_of_breeds.append(item[0])
-#     list_of_breeds = [key  for (key, value) in pets['breed'].items() if value == 'British Shorthair']
-#     return  (list_of_breeds)
-
-
-
-
 
 #10 & 11
 def find_pet_by_name(pet_shop, pet_name):
@@ -76,32 +48,30 @@ def find_pet_by_name(pet_shop, pet_name):
 
 #12
 def remove_pet_by_name(pet_shop, pet_name):
-    for i in range(len(pet_shop['pets'])): 
-        if pet_shop['pets'][i]['name'] == pet_name: 
-            del pet_shop['pets'][i] 
+    for pet in range(len(pet_shop['pets'])): 
+        if pet_shop['pets'][pet]['name'] == pet_name: 
+            del pet_shop['pets'][pet] 
             break
         
     #print (pet_shop['pets'])
 
-
-
 #13
-#def add_pet_to_stock(pet_shop, new_pet):
-    
-
+def add_pet_to_stock(pet_shop, new_pet):
+    return pet_shop['pets'].append(new_pet)
 
 #14
-
-
+def get_customer_cash(customer):
+    return customer['cash']
 
 #15
-
-
-
+def remove_customer_cash(customer, money):
+    customer['cash'] -= money
 
 #16
-
-
+def get_customer_pet_count(customer):
+    return len(customer['pets'])
+    
 
 #17    
-    
+def add_pet_to_customer(customer, new_pet):
+    return customer['pets'].append(new_pet)    
