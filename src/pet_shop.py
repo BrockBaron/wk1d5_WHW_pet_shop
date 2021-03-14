@@ -33,38 +33,28 @@ def get_stock_count(pet_shop):
     # return total_pets
 
 #8
-# def get_pets_by_breed(pet_shop, breed):
-#     pets= pet_shop['pets']
-    
-#     breed_found = []
-#     breed_not_found = []
-    
-#     for pet in pets:
-#         if pet['breed'] == 'British Shorthair':
-#             breed_found.append(pet['breed'])
-#         return len(breed_found)
-    
-
 def get_pets_by_breed(pet_shop, breed):
     breed = []
     for pet in pet_shop["pets"]:
         if pet["breed"] == 'British Shorthair':
             breed.append(pet)
-            print(len(breed))
+            # print(len(breed))
+        # elif pet["breed"] == 'Dalmation':
+        #     breed.pop(pet)
     return breed
+#
 
+# #9
+# def get_pets_by_breed(pet_shop, breed):
+#     breed_not_found = []
+#     for pet in pet_shop["pets"]:
+#         if pet["breed"] == 'Dalmation':
+#             breed_not_found.append(pet)
+#             print(len(breed_not_found))
+#     return breed_not_found
 
-
-
-
-
-
-
-
-
-
-
-# import copy
+#list comprehension 
+#import copy
 # def get_pets_by_breed(pet_shop, breed):
     
 #     pets= pet_shop['pets']
@@ -74,44 +64,49 @@ def get_pets_by_breed(pet_shop, breed):
 #     for item  in breed_type:
 #         if item[0] == breed:
 #             list_of_breeds.append(item[0])
-#     list_of_breeds = [key  for (key, value) in pets.items() if value == 'British Shorthair'] 
-#     return  len(list_of_breeds)
-
-
-#list comprehension        
+#     list_of_breeds = [key  for (key, value) in pets['breed'].items() if value == 'British Shorthair']
+#     return  (list_of_breeds)
 
 
 
 
 
+#10
+def find_pet_by_name(pet_shop, pet_name):
+    for name in pet_shop["pets"]:
+        if name["name"] == pet_name:
+            return name
 
 
 
 
 
+#11
 
 
 
 
-    # breed_count = []        
-    
-    # if breed in pet_shop == 'British Shorthair':
-    #     breed_count.append(breed)
-    #     pet_shop.get('breed')
-    #     len(breed)
-    
-    
-    # # elif breed =='Dalmation':
-    # #     breed_count.append(breed)
-    
-    # # len(breed_count)
-    # #pet_list=pet_shop['pets']['breed']
-    
-    # # breed_count=[]
-    # # for breed in pet_shop:
-    # #     if breed == 'British Shorthair':
-    # #         breed_count.append(pet_list.count(breed))
-    
-    # return breed_count
+#12
 
+
+
+
+#13
+
+
+
+#14
+
+
+
+#15
+
+
+
+
+#16
+
+
+
+#17    
     
