@@ -93,7 +93,6 @@ class TestPetShop(unittest.TestCase):
         cash = get_total_cash(self.cc_pet_shop)
         self.assertEqual(990, cash)
 #5
-    
     def test_pets_sold(self):
         sold = get_pets_sold(self.cc_pet_shop)
         self.assertEqual(0, sold)
@@ -112,7 +111,6 @@ class TestPetShop(unittest.TestCase):
         pets = get_pets_by_breed(self.cc_pet_shop, "British Shorthair")
         self.assertEqual(2, len(pets))
 #9
-    @unittest.skip("delete this line to run the test")
     def test_all_pets_by_breed__not_found(self):
         pets = get_pets_by_breed(self.cc_pet_shop, "Dalmation")
         self.assertEqual(0, len(pets))
@@ -125,14 +123,13 @@ class TestPetShop(unittest.TestCase):
     def test_find_pet_by_name__returns_None(self):
         pet = find_pet_by_name(self.cc_pet_shop, "Fred")
         self.assertIsNone(pet)
-#12
-    
+#12 
     def test_remove_pet_by_name(self):
         remove_pet_by_name(self.cc_pet_shop, "Arthur")
         pet = find_pet_by_name(self.cc_pet_shop,"Arthur")
         self.assertIsNone(pet)
 #13
-    @unittest.skip("delete this line to run the test")
+    #@unittest.skip("delete this line to run the test")
     def test_add_pet_to_stock(self):
         add_pet_to_stock(self.cc_pet_shop, self.new_pet)
         count = get_stock_count(self.cc_pet_shop)
