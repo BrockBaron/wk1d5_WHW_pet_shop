@@ -71,23 +71,20 @@ def get_pets_by_breed(pet_shop, breed):
 
 
 
-#10
+#10 & 11
 def find_pet_by_name(pet_shop, pet_name):
     for name in pet_shop["pets"]:
         if name["name"] == pet_name:
             return name
 
-
-
-
-
-#11
-
-
-
-
 #12
-
+def remove_pet_by_name(pet_shop, pet_name):
+    for i in range(len(pet_shop['pets'])): 
+        if pet_shop['pets'][i]['name'] == pet_name: 
+            del pet_shop['pets'][i] 
+            break
+        
+    #print (pet_shop['pets'])
 
 
 
